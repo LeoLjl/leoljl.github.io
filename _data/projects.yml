@@ -1,0 +1,24 @@
+# =============================================================================
+# OPEN SOURCE PROJECTS
+# =============================================================================
+# To add a project, copy the template:
+#   - title: "Project Name"
+#     description: "One-line description."
+#     url: "https://github.com/..."
+#     repo: "owner/repo"   # GitHub owner/repo for live star count
+# =============================================================================
+
+- title: "AutoGen"
+  description: "Co-creator and maintainer. An open-source framework enabling next-gen LLM applications via multi-agent conversation."
+  url: "https://github.com/microsoft/autogen"
+  repo: "microsoft/autogen"
+
+- title: "AG2"
+  description: "Co-creator and maintainer. The evolution of AutoGen with integrated adaptive team building for LLM agents."
+  url: "https://github.com/ag2ai/ag2"
+  repo: "ag2ai/ag2"
+
+- title: "FLAML"
+  description: "Maintainer. A fast library for automated machine learning and tuning."
+  url: "https://github.com/microsoft/FLAML"
+  repo: "microsoft/FLAML"

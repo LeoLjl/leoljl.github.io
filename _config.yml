@@ -1,0 +1,23 @@
+title: Jiale Liu
+description: Ph.D. Student in Informatics, Penn State University
+url: "" # Set to your GitHub Pages URL, e.g., https://username.github.io
+baseurl: "" # Set if hosting at a subpath, e.g., /personal_website
+
+author:
+  name: Jiale Liu
+  email: jiale.liu@psu.edu
+  phone: "(814) 280-3746"
+  affiliation: Penn State University
+  department: College of Information Sciences and Technology
+  google_scholar: "https://scholar.google.com/citations?user=Fw_mPwEAAAAJ"
+  github: "https://github.com/LeoLjl"
+  linkedin: ""
+  twitter: ""
+
+markdown: kramdown
+permalink: pretty
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - cv_jiale.pdf

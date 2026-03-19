@@ -1,0 +1,112 @@
+---
+layout: default
+title: Jiale Liu
+---
+
+<section class="hero">
+  <img src="https://github.com/LeoLjl.png" alt="Jiale Liu" class="hero-photo">
+
+  <div class="hero-info">
+    <h1>Jiale Liu</h1>
+    <p class="hero-subtitle">Ph.D. Student in Informatics · Penn State University</p>
+    <div class="hero-links">
+      <a href="mailto:{{ site.author.email }}">Email</a>
+      {% if site.author.google_scholar %}<a href="{{ site.author.google_scholar }}">Google Scholar</a>{% endif %}
+      {% if site.author.github %}<a href="{{ site.author.github }}">GitHub</a>{% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <p>
+    I am a Ph.D. student in Informatics at Penn State University, advised by
+    <a href="#">Qingyun Wu</a>. Previously I obtained my B.Eng in Computer Science
+    from Xidian University (Rank 1/134). I have spent time at
+    <strong>Adobe Research</strong> as a research scientist intern.
+  </p>
+  <p>
+    My research develops scalable frameworks and algorithms that help LLM agents reason,
+    collaborate, and self-improve in complex open-ended environments. I study how to debug
+    and optimize agentic behavior and how to form effective multi-agent teams.
+  </p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <ul class="exp-list">
+    {% for exp in site.data.experience %}
+    <li class="exp-item">
+      <div class="exp-header">
+        <div class="exp-title">
+          <span class="exp-org">{{ exp.organization }}</span> · <span class="exp-role">{{ exp.role }}</span>
+        </div>
+        <span class="exp-period">{{ exp.period }}</span>
+      </div>
+      {% if exp.description.size > 0 %}<p class="exp-desc">{{ exp.description }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Publications</h2>
+  <p class="pub-legend">(* equal contribution)</p>
+
+  {% assign pubs_by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+  {% for year_group in pubs_by_year %}
+  <div class="pub-year">{{ year_group.name }}</div>
+  <ul class="pub-list">
+    {% for pub in year_group.items %}
+    <li class="pub-item">
+      <div class="pub-title">{{ pub.title }}</div>
+      <div class="pub-authors">{{ pub.authors }}</div>
+      <div class="pub-venue">
+        <em>{{ pub.venue_short }}</em>{% if pub.note %} <span class="pub-note">{{ pub.note }}</span>{% endif %}
+      </div>
+      {% if pub.pdf.size > 0 or pub.code.size > 0 or pub.project.size > 0 %}
+      <div class="pub-links">
+        {% if pub.pdf.size > 0 %}<a href="{{ pub.pdf }}">PDF</a>{% endif %}
+        {% if pub.code.size > 0 %}<a href="{{ pub.code }}">Code</a>{% endif %}
+        {% if pub.project.size > 0 %}<a href="{{ pub.project }}">Project</a>{% endif %}
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</section>
+
+<section>
+  <h2>Open Source</h2>
+  <ul class="oss-list">
+    {% for project in site.data.projects %}
+    <li class="oss-item">
+      <div class="oss-header">
+        <h3>
+          {% if project.url != "" %}<a href="{{ project.url }}">{{ project.title }}</a>{% else %}{{ project.title }}{% endif %}
+        </h3>
+        {% if project.repo %}<span class="oss-stars" data-repo="{{ project.repo }}"></span>{% endif %}
+      </div>
+      <p>{{ project.description }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<script>
+document.querySelectorAll('.oss-stars[data-repo]').forEach(function(el) {
+  var repo = el.getAttribute('data-repo');
+  fetch('https://api.github.com/repos/' + repo)
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.stargazers_count != null) {
+        var count = data.stargazers_count;
+        var text = count >= 1000
+          ? (count / 1000).toFixed(count >= 10000 ? 0 : 1) + 'k'
+          : count.toString();
+        el.textContent = '\u2605 ' + text;
+      }
+    })
+    .catch(function() {});
+});
+</script>
