@@ -19,6 +19,23 @@
 #     bibtex: ""          # BibTeX string (optional)
 # =============================================================================
 
+- title: "TeamFusion: Supporting Open-ended Teamwork with Multi-Agent Systems"
+  authors: "<b>Jiale Liu</b>, Victor Bursztyn, Lin Ai, Haoliang Wang, Sunav Choudhary, Saayan Mitra, Qingyun Wu"
+  venue: "Annual Meeting of the Association for Computational Linguistics"
+  venue_short: "ACL"
+  year: 2026
+  pdf: ""
+  code: ""
+
+- title: "Digital Agents Require Unified Agent-Native Environments"
+  authors: "Yiran Wu*, <b>Jiale Liu</b>*, Jieyu Zhang, Yaolun Zhang, Shilong Liu, Chi Wang, Mengdi Wang, Huazheng Wang, Qingyun Wu"
+  venue: "International Conference on Machine Learning"
+  venue_short: "ICML"
+  year: 2026
+  equal: true
+  pdf: ""
+  code: ""
+
 - title: "Divide, Optimize, Merge: Fine-Grained LLM Agent Optimization at Scale"
   authors: "<b>Jiale Liu</b>, Yifan Zeng, Shaokun Zhang, Chi Zhang, Malte H&oslash;jmark-Bertelsen, Marie Normann Gadeberg, Huazheng Wang, Qingyun Wu"
   venue: "Findings of the Association for Computational Linguistics: EMNLP"
