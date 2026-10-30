@@ -1,0 +1,158 @@
+# =============================================================================
+# PUBLICATIONS
+# =============================================================================
+# To add a new publication, copy the template below and fill in the fields.
+# Papers are displayed in the order listed here (put newest first).
+#
+# Template:
+#   - title: "Paper Title"
+#     authors: "Author1, <b>Your Name</b>, Author2"    # use <b> to bold your name
+#     venue: "Conference Name"
+#     venue_short: "CONF"
+#     year: 2025
+#     selected: false     # true to feature in the default "Selected" view
+#     note: ""            # e.g., "Spotlight", "Oral", "Best Paper"
+#     equal: false        # true if equal contribution (adds * marker)
+#     pdf: ""             # URL to paper / arXiv / OpenReview / DOI
+#     code: ""            # URL to code repository
+#     project: ""         # URL to project page
+#     slides: ""          # URL to slides
+#     bibtex: ""          # BibTeX string (optional)
+# =============================================================================
+
+- title: "Who&When Pro: Can LLMs Really Attribute Failures in AI Agents?"
+  authors: "<b>Jiale Liu</b>, Huajun Xi, Shaokun Zhang, Yifan Zeng, Tianwei Yue, Chi Wang, Jian Kang, Qingyun Wu, Huazheng Wang"
+  venue: "Conference on Neural Information Processing Systems, Evaluations and Datasets Track"
+  venue_short: "NeurIPS E&D"
+  year: 2026
+  selected: true
+  pdf: "https://arxiv.org/abs/2607.09996"
+  code: "https://github.com/ag2ai/whowhen_pro"
+  project: "https://whowhenpro.github.io/"
+
+- title: "TeamFusion: Supporting Open-ended Teamwork with Multi-Agent Systems"
+  authors: "<b>Jiale Liu</b>, Victor Bursztyn, Lin Ai, Haoliang Wang, Sunav Choudhary, Saayan Mitra, Qingyun Wu"
+  venue: "Annual Meeting of the Association for Computational Linguistics"
+  venue_short: "ACL"
+  year: 2026
+  selected: true
+  pdf: "https://arxiv.org/abs/2604.19589"
+  code: ""
+
+- title: "Digital Agents Require Unified Agent-Native Environments"
+  authors: "Yiran Wu*, <b>Jiale Liu</b>*, Jieyu Zhang, Yaolun Zhang, Shilong Liu, Chi Wang, Mengdi Wang, Huazheng Wang, Qingyun Wu"
+  venue: "International Conference on Machine Learning"
+  venue_short: "ICML"
+  year: 2026
+  selected: true
+  equal: true
+  pdf: "https://openreview.net/pdf?id=XZaRHkbc2u"
+  code: "https://github.com/ag2ai/AgentVM"
+  project: "https://ag2ai.github.io/agentvm-page/"
+
+- title: "Divide, Optimize, Merge: Fine-Grained LLM Agent Optimization at Scale"
+  authors: "<b>Jiale Liu</b>, Yifan Zeng, Shaokun Zhang, Chi Zhang, Malte H&oslash;jmark-Bertelsen, Marie Normann Gadeberg, Huazheng Wang, Qingyun Wu"
+  venue: "Findings of the Association for Computational Linguistics: EMNLP"
+  venue_short: "EMNLP Findings"
+  year: 2025
+  selected: true
+  pdf: "https://arxiv.org/abs/2505.03973"
+  code: "https://github.com/LeoLjl/Fine_grained_optimize"
+
+- title: "SimpleDoc: Multi-Modal Document Understanding with Dual-Cue Page Retrieval and Iterative Refinement"
+  authors: "Chelsi Jain, Yiran Wu, Yifan Zeng, <b>Jiale Liu</b>, Zhenwen Shao, Qingyun Wu, Huazheng Wang"
+  venue: "Conference on Empirical Methods in Natural Language Processing"
+  venue_short: "EMNLP"
+  year: 2025
+  pdf: "https://arxiv.org/abs/2506.14035"
+  code: "https://github.com/ag2ai/SimpleDoc"
+
+- title: "Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems"
+  authors: "Shaokun Zhang, Ming Yin, Jieyu Zhang, <b>Jiale Liu</b>, et al."
+  venue: "International Conference on Machine Learning"
+  venue_short: "ICML"
+  year: 2025
+  selected: true
+  note: "Spotlight"
+  pdf: "https://arxiv.org/abs/2505.00212"
+  code: "https://github.com/ag2ai/Agents_Failure_Attribution"
+  project: "https://ag2ai.github.io/Agents_Failure_Attribution/"
+
+- title: "Adaptive In-conversation Team Building for Language Model Agents"
+  authors: "Linxin Song*, <b>Jiale Liu</b>*, Jieyu Zhang, Shaokun Zhang, Ao Luo, Shijian Wang, Qingyun Wu, Chi Wang"
+  venue: "Conference on Language Modeling, Workshop on AI Agents"
+  venue_short: "COLM Workshop"
+  year: 2024
+  selected: true
+  equal: true
+  pdf: "https://arxiv.org/abs/2405.19425"
+  code: ""
+
+- title: "Autogen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation Framework"
+  authors: "Qingyun Wu, Gagan Bansal, Jieyu Zhang, Yiran Wu, Beibin Li, Erkang Zhu, Li Jiang, Xiaoyun Zhang, Shaokun Zhang, <b>Jiale Liu</b>, Ahmed Hassan Awadallah, Ryen W White, Doug Burger, Chi Wang"
+  venue: "Conference on Language Modeling"
+  venue_short: "COLM"
+  year: 2024
+  selected: true
+  note: "ICLR Workshop Best Paper Award"
+  pdf: "https://arxiv.org/abs/2308.08155"
+  code: "https://github.com/microsoft/autogen"
+
+- title: "Refined Coreset Selection: Towards Minimal Coreset Size under Model Performance Constraints"
+  authors: "Xiaobo Xia, <b>Jiale Liu</b>, Shaokun Zhang, Qingyun Wu, Tongliang Liu"
+  venue: "International Conference on Machine Learning"
+  venue_short: "ICML"
+  year: 2024
+  selected: true
+  note: "Spotlight"
+  pdf: "https://arxiv.org/abs/2311.08675"
+  code: ""
+
+- title: "Offline Training of Language Model Agents with Functions as Learnable Weights"
+  authors: "Shaokun Zhang, Jieyu Zhang, <b>Jiale Liu</b>, Linxin Song, Chi Wang, Ranjay Krishna, Qingyun Wu"
+  venue: "International Conference on Machine Learning"
+  venue_short: "ICML"
+  year: 2024
+  pdf: "https://arxiv.org/abs/2402.11359"
+  code: ""
+
+- title: "IDEAL: Influence-Driven Selective Annotations Empower In-Context Learners in Large Language Models"
+  authors: "Shaokun Zhang, Xiaobo Xia, Zhaoqing Wang, Ling-Hao Chen, <b>Jiale Liu</b>, Qingyun Wu, Tongliang Liu"
+  venue: "International Conference on Learning Representations"
+  venue_short: "ICLR"
+  year: 2024
+  pdf: "https://arxiv.org/abs/2310.10873"
+  code: "https://github.com/skzhang1/IDEAL"
+
+- title: "Embodied LLM Agents Learn to Cooperate in Organized Teams"
+  authors: "Xudong Guo, Kaixuan Huang, <b>Jiale Liu</b>, Wenhui Fan, Natalia V&eacute;lez, Qingyun Wu, Huazheng Wang, Thomas L Griffiths, Mengdi Wang"
+  venue: "NeurIPS Workshop on Language Gamification"
+  venue_short: "NeurIPS Workshop"
+  year: 2024
+  pdf: "https://arxiv.org/abs/2403.12482"
+  code: "https://github.com/tobeatraceur/Organized-LLM-Agents"
+
+- title: "Identifying Trustworthiness Challenges in Deep Learning Models for Continental-Scale Water Quality Prediction"
+  authors: "Xiaobo Xia, Xiaofeng Liu, <b>Jiale Liu</b>, et al."
+  venue: "Nexus Journal"
+  venue_short: "Nexus"
+  year: 2024
+  pdf: "https://doi.org/10.1016/j.ynexs.2025.100104"
+  code: "https://github.com/xiaoboxia/TrustEval-DeepWQ"
+
+- title: "RLAD: A Reliable Hippo-guided Multi-task Model for Alzheimer's Disease Diagnosis"
+  authors: "Zhenxin Lei*, Wenjing Zhu*, <b>Jiale Liu</b>*, Cong Hua, Johann Li, Syed Afaq Ali Shah, Liang Zhang, Mohammed Bennamoun, Cuiping Mao"
+  venue: "IEEE Journal of Biomedical and Health Informatics"
+  venue_short: "J-BHI"
+  year: 2024
+  equal: true
+  pdf: "https://doi.org/10.1109/JBHI.2024.3412926"
+  code: ""
+
+- title: "Moderate Coreset: A Universal Method of Data Selection for Real-world Data Analysis"
+  authors: "Xiaobo Xia, <b>Jiale Liu</b>, Jun Yu, Xu Shen, Bo Han, Tongliang Liu"
+  venue: "International Conference on Learning Representations"
+  venue_short: "ICLR"
+  year: 2023
+  pdf: "https://openreview.net/forum?id=7D5EECbOaf9"
+  code: "https://github.com/xiaoboxia/Moderate-DS"

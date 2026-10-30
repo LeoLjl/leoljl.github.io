@@ -1,0 +1,30 @@
+title: Jiale Liu
+description: Ph.D. Student in Informatics at Penn State University. Research on LLM agents and multi-agent systems.
+url: "" # Set to your GitHub Pages URL, e.g., https://username.github.io
+baseurl: "" # Set if hosting at a subpath, e.g., /personal_website
+
+author:
+  name: Jiale Liu
+  email: jiale.liu@psu.edu
+  phone: "(814) 280-3746"
+  role: Ph.D. Student in Informatics
+  affiliation: Penn State University
+  department: College of Information Sciences and Technology
+  advisor: Qingyun Wu
+  advisor_url: "https://qingyun-wu.github.io/"
+  google_scholar: "https://scholar.google.com/citations?user=Fw_mPwEAAAAJ"
+  github: "https://github.com/LeoLjl"
+  linkedin: ""
+  twitter: ""
+  cv: ""          # e.g. "/cv_jiale.pdf" once the file is in the repo
+  photo: "https://github.com/LeoLjl.png?size=400"
+
+# Shown as the red notice in the About section. Leave empty to hide it.
+job_market: "I am on the job market and looking for full-time roles starting in 2027. If you are hiring, I would love to hear from you."
+
+markdown: kramdown
+permalink: pretty
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

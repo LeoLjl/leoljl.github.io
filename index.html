@@ -1,0 +1,217 @@
+---
+layout: default
+title: Jiale Liu
+---
+
+<section id="about" class="intro" aria-label="Biography">
+  <div class="prose">
+    <p>
+      I am a Ph.D. student in Informatics at Penn State University, advised by
+      <a href="{{ site.author.advisor_url }}">{{ site.author.advisor }}</a>.
+      I am currently a student researcher at <strong>Google DeepMind</strong> in New York,
+      working on continual learning and memory for LLM agents. In summer 2025, I was a research scientist
+      intern at <strong>Adobe Research</strong>. Before Penn State, I obtained my B.Eng. in
+      Computer Science from Xidian University, where I ranked first in my class of 134.
+    </p>
+    <p>
+      My research develops scalable frameworks and algorithms that enable LLM agents to reason,
+      collaborate, and self-improve in complex, open-ended environments. In particular, I study
+      how to debug and optimize agentic behavior and how to form effective multi-agent teams.
+      I am a co-creator and maintainer of <a href="https://github.com/microsoft/autogen">AutoGen</a>.
+    </p>
+  </div>
+
+  {% if site.job_market and site.job_market != "" %}
+  <div class="margin-row market-strip" role="note" aria-label="Job market status">
+    <span class="market-stamp">2027 Job Market</span>
+    <p class="market-copy">
+      {{ site.job_market }}
+      <a class="market-contact" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+    </p>
+  </div>
+  {% endif %}
+</section>
+
+<section id="experience" class="section">
+  <div class="section-head">
+    <h2 class="section-title">Experience</h2>
+  </div>
+  <ul class="ruled-list">
+    {% for exp in site.data.experience %}
+    <li class="margin-row ruled-item">
+      <span class="margin-label">{{ exp.period }}</span>
+      <div class="item-body">
+        <div class="exp-heading">
+          <p class="exp-primary">
+            <span class="exp-org">{{ exp.organization }}</span>
+            <span class="exp-sep" aria-hidden="true">&mdash;</span>
+            <span class="exp-role">{{ exp.role }}</span>{% if exp.location and exp.location != "" %}<span class="exp-loc">, {{ exp.location }}</span>{% endif %}
+          </p>
+        </div>
+        {% if exp.description and exp.description != "" %}<p class="item-desc">{{ exp.description }}</p>{% endif %}
+        {% if exp.mentors and exp.mentors.size > 0 %}
+        <p class="exp-mentors">
+          Mentors:
+          {% for m in exp.mentors %}{% if m.url and m.url != "" %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name | default: m }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+        </p>
+        {% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="publications" class="section pub-section" data-view="selected">
+  <div class="section-head">
+    <div class="section-title-group">
+      <h2 class="section-title">Publications</h2>
+      <span class="section-note">* equal contribution</span>
+    </div>
+    <div class="pub-filter" role="group" aria-label="Filter publications">
+      <button type="button" class="filter-btn is-active" data-filter="selected" aria-pressed="true">Selected</button>
+      <button type="button" class="filter-btn" data-filter="all" aria-pressed="false">Full</button>
+    </div>
+  </div>
+
+  {% assign pubs_by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+  <div class="pub-groups">
+    {% for year_group in pubs_by_year %}
+    {% assign year_selected = year_group.items | where: "selected", true %}
+    <div class="margin-row year-group"{% if year_selected.size > 0 %} data-has-selected="true"{% endif %}>
+      <h3 class="margin-label year-label">{{ year_group.name }}</h3>
+      <ol class="pub-list">
+        {% for pub in year_group.items %}
+        <li class="pub"{% if pub.selected %} data-selected="true"{% endif %}>
+          <p class="pub-title">
+            {% if pub.pdf and pub.pdf != "" %}<a class="pub-title-link" href="{{ pub.pdf }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+          </p>
+          <p class="pub-authors">{{ pub.authors }}</p>
+          <div class="pub-meta">
+            <span class="pub-venue" title="{{ pub.venue }}">{{ pub.venue_short }} {{ pub.year }}</span>
+            {% if pub.note and pub.note != "" %}<span class="pub-award">{{ pub.note }}</span>{% endif %}
+            {% if pub.pdf or pub.code or pub.project or pub.slides %}
+            <span class="pub-links">
+              {% if pub.pdf and pub.pdf != "" %}<a class="pub-link" href="{{ pub.pdf }}">Paper</a>{% endif %}
+              {% if pub.code and pub.code != "" %}<a class="pub-link" href="{{ pub.code }}">Code</a>{% endif %}
+              {% if pub.project and pub.project != "" %}<a class="pub-link" href="{{ pub.project }}">Project</a>{% endif %}
+              {% if pub.slides and pub.slides != "" %}<a class="pub-link" href="{{ pub.slides }}">Slides</a>{% endif %}
+            </span>
+            {% endif %}
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="pub-footer">
+    <button type="button" class="pub-toggle-inline" data-toggle-view>
+      Full publication list &rarr;
+    </button>
+  </div>
+</section>
+
+<section id="open-source" class="section">
+  <div class="section-head">
+    <h2 class="section-title">Open Source</h2>
+  </div>
+  <ul class="ruled-list">
+    {% for project in site.data.projects %}
+    <li class="margin-row ruled-item">
+      <span class="margin-label">{{ project.role | default: "Open source" }}</span>
+      <div class="item-body">
+        <div class="repo-heading">
+          <div class="repo-title-group">
+            {% if project.url and project.url != "" %}
+            <a class="repo-name" href="{{ project.url }}">{{ project.title }}</a>
+            {% else %}
+            <span class="repo-name">{{ project.title }}</span>
+            {% endif %}
+            {% if project.repo and project.repo != "" %}
+            <span class="repo-slug">{{ project.repo }}</span>
+            {% endif %}
+          </div>
+          {% if project.repo and project.repo != "" %}
+          <a class="repo-stars" href="https://github.com/{{ project.repo }}" data-repo="{{ project.repo }}" aria-label="GitHub stars for {{ project.title }}" hidden>
+            <svg class="star-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.6l1.92 3.89 4.3.62-3.11 3.03.73 4.28L8 11.4l-3.84 2.02.73-4.28L1.78 6.11l4.3-.62z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            <span class="star-count"></span>
+          </a>
+          {% endif %}
+        </div>
+        <p class="item-desc">{{ project.description }}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<script>
+  (function () {
+    // Selected vs. Full publications filter.
+    var pubSection = document.querySelector('.pub-section');
+    var filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
+    var inlineToggle = document.querySelector('[data-toggle-view]');
+
+    function setPubView(mode) {
+      if (!pubSection) return;
+      pubSection.setAttribute('data-view', mode);
+      filterBtns.forEach(function (btn) {
+        var active = btn.getAttribute('data-filter') === mode;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+      if (inlineToggle) {
+        inlineToggle.innerHTML = mode === 'selected'
+          ? 'Full publication list &rarr;'
+          : '&larr; Selected publications';
+      }
+    }
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setPubView(btn.getAttribute('data-filter'));
+      });
+    });
+
+    if (inlineToggle) {
+      inlineToggle.addEventListener('click', function () {
+        var next = pubSection.getAttribute('data-view') === 'selected' ? 'all' : 'selected';
+        setPubView(next);
+        if (next === 'selected') {
+          pubSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+
+    // Live GitHub star counts with session caching.
+    document.querySelectorAll('.repo-stars[data-repo]').forEach(function (el) {
+      var repo = el.getAttribute('data-repo');
+      var countEl = el.querySelector('.star-count');
+      var cacheKey = 'gh_stars_' + repo;
+
+      function renderStars(n) {
+        if (n == null || !countEl) return;
+        countEl.textContent = n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1) + 'k' : String(n);
+        el.hidden = false;
+      }
+
+      try {
+        var cached = sessionStorage.getItem(cacheKey);
+        if (cached) {
+          renderStars(parseInt(cached, 10));
+          return;
+        }
+      } catch (e) {}
+
+      fetch('https://api.github.com/repos/' + repo)
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) {
+          if (!data || data.stargazers_count == null) return;
+          renderStars(data.stargazers_count);
+          try { sessionStorage.setItem(cacheKey, String(data.stargazers_count)); } catch (e) {}
+        })
+        .catch(function () {});
+    });
+  })();
+</script>
