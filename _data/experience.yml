@@ -1,0 +1,27 @@
+# =============================================================================
+# EXPERIENCE
+# =============================================================================
+
+- role: "Student Researcher"
+  organization: "Google DeepMind"
+  logo: "/assets/img/gdm.png"
+  location: "New York, NY"
+  period: "May – Oct 2026"
+  description: "Continual learning and memory for LLM agents that learn from experience."
+  mentors:
+    - name: "Zun Li"
+      url: "https://rezunli96.github.io/"
+    - name: "John Schultz"
+      url: "https://scholar.google.com/citations?user=UQ3vbTAAAAAJ"
+
+- role: "Research Scientist Intern"
+  organization: "Adobe Research"
+  logo: "/assets/img/adobe.png"
+  location: "San Jose, CA"
+  period: "May – Aug 2025"
+  description: "Multi-agent intelligence for creative support."
+  mentors:
+    - name: "Victor S. Bursztyn"
+      url: "https://vbursztyn.github.io/"
+    - name: "Saayan Mitra"
+      url: "https://research.adobe.com/person/saayan-mitra/"
